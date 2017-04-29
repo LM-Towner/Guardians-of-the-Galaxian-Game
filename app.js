@@ -10,8 +10,10 @@ var imageRepository = new function() {
 	this.background = new Image();
 	this.spaceship = new Image();
 	this.bullet = new Image();
+	this.enemy = new Image();
+	this.enemybullet = new Image();
 
-	var numImages = 3;
+	var numImages = 5;
 	var numLoaded = 0;
 	function imageLoaded() {
 		numLoaded++;
@@ -29,9 +31,18 @@ var imageRepository = new function() {
 		imageLoaded();
 	}
 
+	this.enemy.onload = function() {
+		imageLoaded();
+	}
+	this.enemyBullet.onload = function() {
+		imageLoaded();
+	}
+
 	this.background.src = "images/star-space-tile.jpg";
 	this.spaceship.src = "images/spaceship.png";
 	this.bullet.src = "images/bullet.png";
+	this.enemy.src = "images/enemy.png";
+	this.enemyBullet.src = "images/bullet_enemy.png"
 }
 
 function Drawable() {
