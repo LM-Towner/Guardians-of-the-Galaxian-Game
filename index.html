@@ -10,11 +10,26 @@
         left: 0px;
         background: transparent;
       }
+      #background {
+        z-index: -2;
+      }
+      #main {
+        z-index: -1;
+      }
+      #ship {
+        z-index: 0;
+      }
     </style>
   </head>
   <body onload="init()">
-    <canvas id="background" width="900" height="360">
+    <canvas id="background" width="600" height="360">
       Your browswer does not support this game. Please try again with another browser
+    </canvas>
+    <!-- Enemy Ship canvas -->
+    <canvas id="main" width="600" height="360">
+    </canvas>
+    <!-- The canvas for the ship movement upwards -->
+    <canvas id="ship" width="600" height="360">
     </canvas>
     <script src="app.js"></script>
   </body>
